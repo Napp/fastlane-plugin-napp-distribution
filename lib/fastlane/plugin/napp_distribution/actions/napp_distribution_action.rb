@@ -2,7 +2,7 @@ module Fastlane
   module Actions
     class NappDistributionAction < Action
       def self.run(params)
-        UI.message("The napp_distribution plugin is working!")
+        UI.message("The napp distribution is working!")
 
         # set the base url
         base_url = "https://i.napp.dk"
@@ -17,7 +17,7 @@ module Fastlane
         connection = self.connection(base_url)
 
         if !File.exist?(file_path)
-          UI.user_error("App build file not found 🚫")
+          UI.error("App build file not found 🚫")
           abort
         end
 
