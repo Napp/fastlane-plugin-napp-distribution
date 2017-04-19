@@ -38,7 +38,7 @@ module Fastlane
           platform = response.body['platform']
           UI.message("Successfully created new app build version: #{app_version_id} for #{platform}")
         else
-          UI.user_error!("Error trying to upload new app build:  #{response.status} - #{response.body}")
+          UI.error("Error trying to upload new app build: #{response.status} - #{response.body}")
         end
 
       end
