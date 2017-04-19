@@ -1,0 +1,7 @@
+lane :test do
+  napp_distribution(
+  	api_key: "my-api-key",
+  	client_id: "app-name",
+  	file_path: "path/to/the/app.ipa"
+  )
+end
